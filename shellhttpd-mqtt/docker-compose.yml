@@ -1,0 +1,9 @@
+version: '3.2'
+
+services:
+  httpd-mqtt:
+    image: hub.foundries.io/<factory>/shellhttpd-mqtt:latest
+    restart: always
+    network_mode: "host"
+    ports:
+      - 8082:${PORT-8082}
