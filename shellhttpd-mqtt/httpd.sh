@@ -7,7 +7,7 @@ while true; do
 	if grep -q "GET / HTTP/1.1" ./tmp.log; then
 		ACCESS=$((ACCESS+1))
 		echo "Number of Access = $ACCESS"
-		mosquitto_pub -h localhost -t "containers/requests" -m "ACCESS=$ACCESS"
+		mosquitto_pub -h host.docker.internal -t "containers/requests" -m "ACCESS=$ACCESS"
 		echo "----------------------"
 	fi
 done

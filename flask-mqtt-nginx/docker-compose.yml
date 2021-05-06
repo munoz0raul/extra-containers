@@ -3,6 +3,8 @@ version: "3"
 services:
   flask-mqtt:
     image: hub.foundries.io/<factory>/flask-mqtt:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   nginx:
     image: nginx:alpine
     volumes:
