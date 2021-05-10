@@ -1,3 +1,4 @@
+# flask-mqtt/app.py
 from flask import Flask
 from flask_mqtt import Mqtt
 
@@ -19,7 +20,7 @@ mqtt = Mqtt(app)
 @app.route('/')
 def hello_world():
   global access
-  return ('Numbem of Access on shellhttpd Container ' + str(access))
+  return ('Number of Access on shellhttpd Container ' + str(access))
 
 @mqtt.on_connect()
 def handle_connect(client, userdata, flags, rc):

@@ -1,4 +1,4 @@
-# hello-world/Dockerfile
+# flask-mqtt/Dockerfile
 FROM alpine
 
 RUN apk add --update py-pip

@@ -1,4 +1,4 @@
-# hello-world-app/docker-compose.yml
+# flask-mqtt-nginx/docker-compose.yml
 version: "3"
 services:
   flask-mqtt:
